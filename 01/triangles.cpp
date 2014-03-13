@@ -15,15 +15,9 @@ const GLuint NumVertices = 6;
 
 class MyApplication: public SdlApplication {
 public:
-//    MyApplication();
     int init(int width, int height);
     void Render();
 };
-
-// MyApplication::MyApplication()
-//     : SdlApplication()
-// {
-// }
 
 int MyApplication::init(int width, int height)
 {
