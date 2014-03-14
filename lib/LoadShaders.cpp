@@ -6,7 +6,6 @@
 
 #include <cstdlib>
 #include <iostream>
-
 #include "LoadShaders.h"
 
 #ifdef __cplusplus
@@ -26,14 +25,12 @@ ReadShader( const char* filename )
 #endif // WIN32
 
     if ( !infile ) {
-#ifdef _DEBUG
         std::cerr << "Unable to open file '" << filename << "'" << std::endl;
-#endif /* DEBUG */
         return NULL;
     }
 
     fseek( infile, 0, SEEK_END );
-    int len = ftell( infile );
+    long len = ftell( infile );
     fseek( infile, 0, SEEK_SET );
 
     GLchar* source = new GLchar[len+1];

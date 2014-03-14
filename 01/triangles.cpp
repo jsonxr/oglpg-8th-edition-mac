@@ -46,6 +46,8 @@ int MyApplication::init(int width, int height)
     glUseProgram(program);
     glVertexAttribPointer(vPosition, 2, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(0));
     glEnableVertexAttribArray(vPosition);
+
+    glClearColor(1.0, 1.0, 1.0, 1.0);
         
     return retval;
 }
@@ -64,8 +66,6 @@ void MyApplication::Render()
     /* Swap our back buffer to the front */
     SDL_GL_SwapWindow(win);
 }
-
-
 
 
 int main(int argc, char* argv[])
